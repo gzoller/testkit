@@ -54,13 +54,13 @@ ThisBuild / githubWorkflowPublishTargetBranches := Seq(
   RefPredicate.StartsWith(Ref.Tag("v"))
 )
 
-lazy val root = project
+lazy val testkit = project
   .in(file("."))
   .settings(
-    Compile / packageBin / mappings += {
-      (baseDirectory.value / "plugin.properties") -> "plugin.properties"
-    },
+    name := "testkit",
+    moduleName := "testkit_3",
     publish / moduleName := "testkit_3",
+    publish / skip := false,
     headerLicense := Some(HeaderLicense.MIT("2025", "Greg Zoller")),
     doc := null,
     Compile / doc / sources := Nil,
