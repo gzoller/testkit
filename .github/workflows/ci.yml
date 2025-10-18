@@ -146,8 +146,8 @@ jobs:
       - env:
           PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
           PGP_SECRET: ${{ secrets.PGP_SECRET }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          SONATYPE_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
         run: sbt tlCiRelease
 
   dependency-submission:
