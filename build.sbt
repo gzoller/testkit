@@ -57,8 +57,6 @@ ThisBuild / githubWorkflowPublishTargetBranches := Seq(
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "testkit",
-    moduleName := "testkit",
     Compile / packageBin / mappings += {
       (baseDirectory.value / "plugin.properties") -> "plugin.properties"
     },
@@ -106,8 +104,8 @@ ThisBuild / githubWorkflowPublish := Seq(
     env = Map(
       "PGP_PASSPHRASE" -> "${{ secrets.PGP_PASSPHRASE }}",
       "PGP_SECRET" -> "${{ secrets.PGP_SECRET }}",
-      "SONATYPE_USERNAME" -> "${{ secrets.SONATYPE_USERNAME }}",
-      "SONATYPE_PASSWORD" -> "${{ secrets.SONATYPE_PASSWORD }}"
+      "CENTRAL_USERNAME" -> "${{ secrets.CENTRAL_USERNAME }}",
+      "CENTRAL_PASSWORD" -> "${{ secrets.CENTRAL_PASSWORD }}"
     )
   )
 )
