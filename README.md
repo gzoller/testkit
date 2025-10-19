@@ -16,11 +16,11 @@ For more information on the sbt-dotty plugin, see the
 
 ### ZioTestKit
 
-Have you ever made a change to your code that breaks lots of existing tests? You then go through the arduous task of going through each test in each suite to fix them all. For me, this often means singling out 1 test at a time for debugging, and then to ensure I haven't broken previously-fixed tests I will uncomment all the tests up to the one I'm working on.
+Have you ever made a change to your code that breaks lots of existing tests? You then go through the arduous task of going through each test in each spec suite to fix them all. For me, this often means singling out 1 test at a time for debugging, and then to ensure I haven't broken previously-fixed tests I will uncomment all the tests up to the one I'm working on.
 
-sbt has tagging along with non-intuitive commands to remember for some of this but I wanted something easier, so I created ZioTestKit, which works with zio test.  It provides ```@@ only``` and ```@@ until```.
+sbt has tagging along with non-intuitive commands I have trouble remembering for some of this but I wanted something much easier, so I created ZioTestKit, which works with zio test.  It provides ```@@ only``` and ```@@ until```.
 
-Use it like this:
+Use it like this: (Don't overlook the @@ ziotestkit at the end of the suite definition!)
 
 ```scala
 import zio.*  

@@ -58,8 +58,7 @@ lazy val testkit = project
   .in(file("."))
   .settings(
     name := "testkit",
-    moduleName := "testkit_3",
-    publish / moduleName := "testkit_3",
+    moduleName := "testkit",
     publish / skip := false,
     headerLicense := Some(HeaderLicense.MIT("2025", "Greg Zoller")),
     doc := null,
